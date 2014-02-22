@@ -27,6 +27,8 @@ $ gem install sse-rails
 Add these lines to a controller:
 
 ```ruby
+require 'rails/sse'
+
 include ActionController::Live
 include Rails::SSE
 ```
