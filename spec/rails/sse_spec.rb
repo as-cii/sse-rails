@@ -21,17 +21,10 @@ describe Rails::SSE do
     @controller.response.stream.closed?.must_equal(true)
   end
 
-  it 'closes event stream even if connection is lost' do
+  it 'closes event stream when errors are raised' do
     @controller.stream do |channel|
-      raise Rails::SSE::ConnectionLost
+      raise IOError
     end
-
-    @controller.response.stream.closed?.must_equal(true)
-  end
-
-  it 'closes event stream only once' do
-    @controller.response.stream.close
-    @controller.stream
 
     @controller.response.stream.closed?.must_equal(true)
   end
