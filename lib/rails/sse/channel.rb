@@ -7,12 +7,18 @@ module Rails
         @stream = stream
       end
 
-      def post(message)
-        @stream.write(JSON.dump(message) + "\n")
+      def post(data, options = {})
+        raise ArgumentError unless data
+
+        options.each do |key, value|
+          @stream.write("#{key}: #{value}\n")
+        end
+
+        @stream.write("data: #{JSON.dump(data)}\n\n")
       end
 
       def ping!
-        post('ping')
+        post(:ping)
       end
     end
   end

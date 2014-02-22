@@ -1,6 +1,5 @@
 require 'minitest/autorun'
 require 'rails/sse/channel'
-require 'stringio'
 require 'json'
 
 describe Rails::SSE::Channel do
@@ -9,23 +8,37 @@ describe Rails::SSE::Channel do
     @channel = Rails::SSE::Channel.new(@output)
   end
 
-  it 'sends hash messages in json' do
-    message = { event: 'test', text: 'A message' }
-    @channel.post(message)
+  it 'encodes data in json' do
+    data = { 'test' => 1 }
 
-    @input.gets.must_include("#{JSON.dump(message)}")
+    @channel.post(data)
+    response = @input.gets.match(/data: (.+)/)
+
+    JSON.parse(response[1]).must_equal(data)
   end
 
-  it 'sends plain messages as strings' do
-    message = 'Plain message'
-    @channel.post(message)
+  it 'encodes options in kv format' do
+    options = { event: 'refresh', id: 'test' }
+    @channel.post({}, options)
 
-    @input.gets.must_include(message)
+    @input.gets.match(/event: refresh/).wont_be_nil
+    @input.gets.match(/id: test/).wont_be_nil
   end
 
   it 'pings client for keep–alive' do
     @channel.ping!
 
-    @input.gets.must_include('ping')
+    @input.gets.match(/data: (.+)/).wont_be_nil
+  end
+
+  it 'closes the message with two LF' do
+    @channel.post({})
+
+    @input.gets.wont_be_nil
+    @input.gets.wont_be_nil
+  end
+
+  it 'raises an error when data is nil' do
+    lambda { @channel.post(nil) }.must_raise(ArgumentError)
   end
 end
