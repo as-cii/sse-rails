@@ -28,14 +28,4 @@ describe Rails::SSE::Channel do
 
     @input.gets.must_include('ping')
   end
-
-  it 'raises an error when connection is lost' do
-    lose_connection
-
-    lambda { @channel.ping! }.must_raise(Rails::SSE::ConnectionLost)
-  end
-
-  def lose_connection
-    @output.close
-  end
 end

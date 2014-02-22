@@ -12,8 +12,7 @@ module Rails
 
       begin
         yield(channel) if block_given?
-      rescue ConnectionLost
-
+      rescue IOError
       ensure
         response.stream.close unless response.stream.closed?
       end

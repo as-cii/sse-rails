@@ -1,8 +1,5 @@
 module Rails
   module SSE
-    class ConnectionLost < StandardError
-    end
-
     class Channel
       attr_reader :stream
 
@@ -11,11 +8,7 @@ module Rails
       end
 
       def post(message)
-        begin
-          @stream.write(JSON.dump(message) + "\n")
-        rescue IOError
-          raise ConnectionLost
-        end
+        @stream.write(JSON.dump(message) + "\n")
       end
 
       def ping!
