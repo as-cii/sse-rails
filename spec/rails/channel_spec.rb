@@ -21,14 +21,14 @@ describe Rails::SSE::Channel do
     options = { event: 'refresh', id: 'test' }
     @channel.post({}, options)
 
-    @input.gets.match(/event: refresh/).wont_be_nil
-    @input.gets.match(/id: test/).wont_be_nil
+    @input.gets.must_match(/event: refresh/)
+    @input.gets.must_match(/id: test/)
   end
 
   it 'pings client for keep–alive' do
     @channel.ping!
 
-    @input.gets.match(/data: (.+)/).wont_be_nil
+    @input.gets.must_match(/data: (.+)/)
   end
 
   it 'closes the message with two LF' do
