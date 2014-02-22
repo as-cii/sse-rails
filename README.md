@@ -1,24 +1,62 @@
-# Sse::Rails
+# sse-rails
 
-TODO: Write a gem description
+sse-rails is a simple wrapper around ActionController::Live to hide all the complexity of streaming.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'sse-rails'
+```ruby
+gem 'sse-rails'
+```
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install sse-rails
+```bash
+$ gem install sse-rails
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Add these lines to a controller:
+
+```ruby
+include ActionController::Live
+include Rails::SSE
+```
+
+And then use it in one of your actions:
+
+```ruby
+def listen
+  stream do |channel|
+    channel.post(event: 'refresh')
+  end
+end
+```
+
+You can also use `Rails::SSE::Channel#ping!` to see if connection is still open. This is useful when you are in a loop like this:
+
+```ruby
+    def listen
+      stream do |channel|
+        loop do
+          channel.send('something') if condition
+
+          channel.ping!
+          sleep 1
+        end
+      end
+    end
+```
+
+Without pinging you would know that the connection was lost only when the condition becomes true.
 
 ## Contributing
 

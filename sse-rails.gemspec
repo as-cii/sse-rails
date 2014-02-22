@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["as-cii@outlook.com"]
   spec.description   = %q{SSE for rails, made easy.}
   spec.summary       = spec.description
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/as-cii/sse-rails"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
