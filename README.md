@@ -46,16 +46,16 @@ end
 You can also use `Rails::SSE::Channel#ping!` to see if connection is still open. This is useful when you are in a loop like this:
 
 ```ruby
-    def listen
-      stream do |channel|
-        loop do
-          channel.send('something') if condition
+def listen
+  stream do |channel|
+    loop do
+      channel.send('something') if condition
 
-          channel.ping!
-          sleep 1
-        end
-      end
+      channel.ping!
+      sleep 1
     end
+  end
+end
 ```
 
 Without pinging you would know that the connection was lost only when the condition becomes true.
