@@ -8,7 +8,7 @@ module Rails
       end
 
       def post(data, options = {})
-        raise ArgumentError unless data
+        raise ArgumentError if empty_arg?(data) && empty_arg?(options)
 
         options.each do |key, value|
           @stream.write("#{key}: #{value}\n")
@@ -19,6 +19,11 @@ module Rails
 
       def ping!
         post(:ping)
+      end
+
+      private
+      def empty_arg?(argument)
+        !argument || argument.empty?
       end
     end
   end
