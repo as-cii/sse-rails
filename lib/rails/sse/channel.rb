@@ -14,7 +14,8 @@ module Rails
           @stream.write("#{key}: #{value}\n")
         end
 
-        @stream.write("data: #{JSON.dump(data)}\n\n")
+        @stream.write("data: #{JSON.dump(data)}") unless empty_arg?(data)
+        end_message
       end
 
       def ping!
@@ -22,6 +23,10 @@ module Rails
       end
 
       private
+      def end_message
+        @stream.write("\n\n")
+      end
+
       def empty_arg?(argument)
         !argument || argument.empty?
       end
