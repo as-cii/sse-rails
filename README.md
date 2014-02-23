@@ -38,7 +38,7 @@ And then use it in one of your actions:
 ```ruby
 def listen
   stream do |channel|
-    channel.post(event: 'refresh')
+    channel.post({ username: 'jim' }, event: 'refresh')
   end
 end
 ```
@@ -49,7 +49,7 @@ You can also use `Rails::SSE::Channel#ping!` to see if connection is still open.
 def listen
   stream do |channel|
     loop do
-      channel.send('something') if condition
+      channel.post('anything') if condition
 
       channel.ping!
       sleep 1
