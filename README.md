@@ -1,4 +1,4 @@
-# sse-rails [![Build Status](https://travis-ci.org/as-cii/sse-rails.png?branch=master)](https://travis-ci.org/as-cii/sse-rails)
+# sse-rails [![Build Status](https://travis-ci.org/as-cii/sse-rails.png?branch=master)](https://travis-ci.org/as-cii/sse-rails) [![Code Climate](https://codeclimate.com/github/as-cii/sse-rails.png)](https://codeclimate.com/github/as-cii/sse-rails)
 
 sse-rails is a simple wrapper around ActionController::Live to hide all the complexity of streaming.
 
