@@ -32,13 +32,16 @@ describe Rails::SSE::Channel do
   end
 
   it 'closes the message with two LF' do
-    @channel.post({})
+    @channel.post({ test: 'data' })
 
     @input.gets.wont_be_nil
     @input.gets.wont_be_nil
   end
 
-  it 'raises an error when data is nil' do
-    lambda { @channel.post(nil) }.must_raise(ArgumentError)
+  it 'raises an error when data and options are both nil or empty' do
+    lambda { @channel.post(nil, nil) }.must_raise(ArgumentError)
+    lambda { @channel.post({}, nil) }.must_raise(ArgumentError)
+    lambda { @channel.post(nil, {}) }.must_raise(ArgumentError)
   end
+
 end
