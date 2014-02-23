@@ -1,3 +1,5 @@
-def assert_line_endings
-  @input.string.end_with?("\n\n").must_equal(true)
+def assert_last_line_blank
+  lines = @input.string.lines
+  lines[lines.count - 2].wont_equal("\n")
+  lines.last.must_equal("\n")
 end

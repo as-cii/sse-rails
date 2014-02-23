@@ -33,16 +33,16 @@ describe Rails::SSE::Channel do
     @input.string.must_match(/data: (.+)\n/)
   end
 
-  it 'closes a data-only message with two LF' do
+  it 'closes a data-only message with a blank line' do
     @channel.post({ test: 'data' })
 
-    assert_line_endings
+    assert_last_line_blank
   end
 
-  it 'closes a options-only message with two LF' do
+  it 'closes a options-only message with a blank line' do
     @channel.post(nil, event: 'test')
 
-    assert_line_endings
+    assert_last_line_blank
   end
 
   it 'does not include data option when data is empty' do
