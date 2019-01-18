@@ -1,31 +1,6 @@
-# sse-rails [![Gem Version](https://badge.fury.io/rb/sse-rails.png)](http://badge.fury.io/rb/sse-rails) [![Build Status](https://travis-ci.org/as-cii/sse-rails.png?branch=master)](https://travis-ci.org/as-cii/sse-rails) [![Code Climate](https://codeclimate.com/github/as-cii/sse-rails.png)](https://codeclimate.com/github/as-cii/sse-rails)
-
-sse-rails is a simple wrapper around ActionController::Live to hide all the complexity of streaming.
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'sse-rails'
-```
-
-And then execute:
-
-```bash
-$ bundle
-```
-
-Or install it yourself as:
-
-```bash
-$ gem install sse-rails
-```
-
-## Usage
-
+# sse-rails [![Gem Version](https://badge.fury.io/rb/sse-rails.png)](http://badge.fury.io/rb/sse-rails) [![Build Status](https://travis-casd
 Add these lines to a controller:
-
+i mean where is it?
 ```ruby
 require 'rails/sse'
 
@@ -34,7 +9,7 @@ include Rails::SSE
 ```
 
 And then use it in one of your actions:
-
+asdasdasdasdasdasdasdasdasdasd
 ```ruby
 def listen
   stream do |channel|
