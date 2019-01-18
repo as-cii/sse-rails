@@ -7,7 +7,7 @@ require 'rails/sse'
 include ActionController::Live
 include Rails::SSE
 ```
-rterterterterterterterterterterterterte
+rtertertertertertertertertertertertertesdfsdfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf
 And then use it in one of your actions:
 asdasdasdasdasdasdasdasdasdasd
 ```ruby
