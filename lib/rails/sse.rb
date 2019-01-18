@@ -4,7 +4,7 @@ require "rails/sse/channel"
 module Rails
   module SSE
     def channel
-      Channel.new(response.stream)
+      Channel.new(response.stream)asdasd
     end
 
     def stream

@@ -1,17 +1,54 @@
 # sse-rails [![Gem Version](https://badge.fury.io/rb/sse-rails.png)](http://badge.fury.io/rb/sse-rails) [![Build Status](https://travis-ci.org/as-cii/sse-rails.png?branch=master)](https://travis-ci.org/as-cii/sse-rails) [![Code Climate](https://codeclimate.com/github/as-cii/sse-rails.png)](https://codeclimate.com/github/as-cii/sse-rails)
+asdasdasdasdasdasdasdasd
+ss
+asdasd
+sad
+a
+sad
 
-sse-rails is a simple wrapper around ActionController::Live to hide all the complexity of streaming.
+for whatever reason we lost connection so we may be in the wrong spot... 
+x
+askjdalksjdlkajsdlkajsldkajslkdjaklsdjalksjdlaksjdlkasjdlkajsdlkasjdlakjsaslkdjalksdjlaksjdlkajsldkjaklsjdlaksjdlkasjldkjalskdjkasjdlkajsdjalksjdlaksjdlkasjdklasjdklajsldkjaslkdjalksdjklasjdlkajsdlkajsdlkjasldjalksdjlkasjdlkasjdlkasjdlkajsldkasjdlkasjdkljsdhfkjsdhfkjashdfksjdfhaksjdfhakjsfhaskldjhfalksjdhfalksdjfhaslkdjfhaskldjfhaslkdjfhaslkdjfhaslkdjfhasdlkjfhasdlkjfhasdlkfjhasdflkjahsdflkjahsdfkljahsdfkjashdkfjhaskdjfhakjsdhfnkxcbvkzxcbvkjzxhgcvkjashdfkashdfkjashdfahsdufiasydfjhasdkjhvaskjdhfajsdhfjaklsdfasd
 
+
+
+asjdlkasjdklajsdlkjaslkdjalksjflksdajfiquweriowejlksdjflskdjf jdfkjsdkfjiau iauksjdfjks dfiueiruwkjsjksdfkjs ldkfjslk djfsidufslkdjflskdfjoiweur lkdjflj dfljsdfiuweioruw ldkjfslkdj f
+
+
+
+sadsdasdasdasdasdasdasdasdasdasd
+
+
+
+asdasdasd
+
+sdasdasdsddfsdlf;sdkglksfg sdf sdf sdf sdf sdf
+
+
+dfsdf
+
+asdasd
+
+e-rails is a simple wrapasdasdasdasdasdper around ActionController::Live to hide all the complexity of streaming.asdasdasdasdasd
+asdasdasdasdasddsczxvdaasdasdasasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd
 ## Installation
-
+rrrr
 Add this line to your application's Gemfile:
-
+ggggg
 ```ruby
 gem 'sse-rails'
 ```
-
+asdasdasdasdasdasdasdasd
 And then execute:
-
+asdasdasdasdasdasdasdasdasdasdasdasdasdasd
+asdasdasdasdasdasdasdasdasdasdasdasdasdasd
+iwuetiwyeiuweyriuweyriwueyriuwyeriuwyeiruw
+aosdasdals;doqiweoqiweroflsdfvskldfsdvxc
+woeiroweirsldfs 
+defs defs
+d featuresd
+f seedf
+seedfdfwer;owieoriw eorw erwer
 ```bash
 $ bundle
 ```
