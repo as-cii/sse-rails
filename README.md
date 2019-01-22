@@ -1,5 +1,7 @@
 # sse-rails [![Gem Version](https://badge.fury.io/rb/sse-rails.png)](http://badge.fury.io/rb/sse-rails) [![Build Status](https://travis-casd
 Add these lines to a controller:
+yeah yeah. awesome
+okay it's good that we are testing this i think
 i mean where is it?
 ```ruby
 require 'rails/sse'
